@@ -19,6 +19,7 @@ class oscillator : public ofBaseApp {
     float getSine();
     float getPhasor();
     float getSaw();
+    float getSquare();
     float getNoise();
     void setFreq(float freq);
     void setAmp( float amp);

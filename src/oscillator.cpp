@@ -38,6 +38,20 @@ float oscillator::getPhasor(){
  
 }
 
+
+float oscillator::getSquare(){
+    
+    currentSample=phase*amplitude;
+    if ( phase >= .5 ){
+          phase = 1.0;
+    }
+    else {phase=0;}
+     
+    phase += (1./(sampleRate/(frequency)));
+    return(currentSample);
+ 
+}
+
 float oscillator::getSaw(){
     //Sawtooth generator. This is like a phasor but goes between -1 and 1
     currentSample=phase*amplitude;
